@@ -41,7 +41,7 @@ def main():
         items = dir_name.split(" - ")
         d = {'uid' : items[0], 'name': items[1], 'ts' : items[2]}
         name_split = d['name'].split()
-        new_fn = name_split[1] + '_' + name_split[0] + "-"
+        new_fn = name_split[-1] + '_' + " ".join(name_split[:-1]) + "-"
         new_fn += d['ts'] + "-" + d['uid']
         return new_fn
     
